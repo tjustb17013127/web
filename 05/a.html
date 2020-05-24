@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<canvas id="tutorial" width="150" height="150"></canvas>
+<script>
+    function draw(){
+        var canvas=document.getElementById("tutorial");
+        if(canvas.getContext){
+            var ctx=canvas.getContext("2d");
+            ctx.fillStyle="rgb(200,0,0)";
+            ctx.fillStyle(10,10,55,50);
+            ctx.fillStyle="rgba(0,0,200,0.5)";
+            ctx.fillStyle(30,30,55,50);
+
+        }
+    }
+</script>
+
+<body onload="draw();">
+    <header> 
+        <h1>主标题</h1>
+        <h2>副标题</h2>
+    </header>
+
+    <article>
+        <p>第一段内容</p>
+        <p>第二段内容</p>
+        <p>第三段内容</p>
+    </article>
+
+    <header>我喜欢的几首诗</header>
+    <section>
+        <article>
+            <header>诗名</header>
+            <p>诗歌内容</p>
+        </article>
+    </section>
+
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">公司简介</a>
+    </nav>
+
+    <video src="#" controls>当前浏览器不支持视频标记</video>
+
+    <video poster="../img/h.jpg">
+        <source src="#.mp4"/>
+        <source src="#.ogg"/>
+    </video>
+
+    
+
+
+    <footer>aa</footer>
+</body>
+</html>
