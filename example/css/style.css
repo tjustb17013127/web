@@ -217,6 +217,11 @@ ul {
     letter-spacing: -0.2px;
     position: relative;
 }
+.album200 a {
+	color:#FFFFFF;
+	text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+}
 .album200 .cdAlbum{
     position: absolute;
     top: 0px;
@@ -235,9 +240,29 @@ ul {
     display: block;
     position: relative;
     margin-top: 0px;
-    left: 0;
+    left: 0px;
     top: 0px;
-    z-index: 300px;
+    z-index: 300;
+}
+.album200 .patina {
+	height: 200px;
+	width: 200px;
+	display: block;
+	position: absolute;
+	background-position:-450px -225px;
+	top:0px;
+	left:0px;
+}
+.nameAlbum, .artistAlbum {
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width:100%;
+}
+.nameAlbum {
+	font-size:12px;
+	font-weight:bold;
+	margin-top:8px;
 }
 .artistAlbum{
     font-size: 11px;
@@ -260,3 +285,4 @@ ul {
     background-image: url("../images/sprite.png") !important;
     background-repeat: no-repeat;
 }
+
