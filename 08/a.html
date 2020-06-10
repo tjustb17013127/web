@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //alert("Hello");  /*弹出对话框 只有确定*/
+        //document.write("<h1>Hello</h1>");/*网页显示*/
+        
+        function getResult(){
+            var first=document.getElementById("first").value;
+            var second=document.getElementById("second").value;
+            var oper=document.getElementById("oper").value;
+            var result;
+            if(oper=="+"){
+                result=parseInt(first)+parseInt(second);
+            }else if(oper=="-"){
+                result=parseInt(first)-parseInt(second);
+            }
+            var results=document.getElementById("result");
+            results.innerHTML="计算结果:"+result;
+        }
+
+    </script><!---->
+
+    <!--<script src="mytest.js" lang="javascript"/>-->
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>第一个数：</td>
+            <td><input type="text" id="first"></td>
+        </tr>
+        <tr>
+            <td>算术运算符：</td>
+            <td>
+                <select name="" id="oper">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>第二个数：</td>
+            <td><input type="text" id="second"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" value="提交"
+                onclick="getResult();"/>
+            </td>
+        </tr>
+        
+    </table>
+    <span id="result"></span>
+      
+    
+   <!--<script>....</script>--> 
+
+</body>
+</html>
