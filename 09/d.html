@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Article(title,author,date,url){
+            this.title=title;
+            this.author=author;
+            this.date=date;
+            this.url=url;
+            this.sayHello=ObjSayHi(name);
+        }
+        function ObjSayHi(name){
+            return "hello !" + name;
+        }
+        var article =new Article("黑与白","咪咪","2014-01-01","http://www.baidu.com");
+        var say = ObjSayHi(article.author);
+        alert(article.sayHello);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

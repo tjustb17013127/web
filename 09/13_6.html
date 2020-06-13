@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <br/>英文单词science的意思是：
+        <input type="radio" id="answerA" name="chooseword" value="科学" checked/>科学
+        <input type="radio" id="answerB" name="chooseword" value="教育">教育
+        <input type="radio" id="answerC" name="chooseword" value="社会">社会
+        
+    </form>
+    <div id="result"></div>
+    <script>
+        window.onload=function(){
+            var result=document.getElementById("result");
+            result.innerHTML ="";
+            var choosewordlist = document.getElementsByName("chooseword");
+            for(var i=0;i<choosewordlist.length;i++)
+            result.innerHTML +=choosewordlist[i].value + "\t"
+        }
+    </script>
+</body>
+</html>

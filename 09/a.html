@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.alert("ko");//window可以免去不写
+       // window.confirm("confirm");//有确认和取消
+
+    </script>
+</head>
+<body>
+    <button onclick="window.close();">关闭窗口</button>
+    <button onclick="window.open('www.baidu.com');">打开窗口</button>
+    <button onclick="window.open('','_blank','width-800,height-800,menubar-no,toolbar-no,resizable-no')">打开窗口2</button>
+    <span id="info"></span>
+    <script>
+       for(var itemName in navigator){
+           var info=document.getElementById("info");
+           info.innerHTML += itemName + ":" + navigator[itemName] + "<br />";
+
+       }        
+    </script>
+
+</body>
+</html>

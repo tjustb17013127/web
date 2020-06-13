@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Name: <input type="text" name ="loginName" id=""><br/>
+        Pass:<input type="password" name ="loginPass" id=""><br/>
+        <input type="button" value="提交" onclick="checkinfo();">
+    </form>
+    <script>
+        function checkinfo(){
+            var form=document.forms[0];
+            var name=form["loginName"].value;
+        }
+    </script>
+</body>
+</html>
