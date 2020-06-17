@@ -9,18 +9,33 @@
     <form action="">
         <br/>英文单词science的意思是：
         <input type="radio" id="answerA" name="chooseword" value="科学" checked/>科学
-        <input type="radio" id="answerB" name="chooseword" value="教育">教育
-        <input type="radio" id="answerC" name="chooseword" value="社会">社会
+        <input type="radio" id="answerB" name="chooseword" value="教育"/>教育
+        <input type="radio" id="answerC" name="chooseword" value="社会"/>社会
+
+        <br/>您的学历是：
+        <input type="radio" id="answer1" name="record" value="小学" />小学
+        <input type="radio" id="answer2" name="record" value="初中"/>初中
+        <input type="radio" id="answer3" name="record" value="高中"checked/>高中
+        <input type="radio" id="answer4" name="record" value="大专" />大专
+        <input type="radio" id="answer5" name="record" value="本科"/>本科
+        <input type="radio" id="answer6" name="record" value="其他"/>其他
         
     </form>
-    <div id="result"></div>
+    <div id="result" style="line-height: 25px;margin-top: 20px;"></div>
     <script>
         window.onload=function(){
             var result=document.getElementById("result");
-            result.innerHTML ="";
+            result.innerHTML ="遍历获取到的name属性值为chooseword的元素的value值：";
             var choosewordlist = document.getElementsByName("chooseword");
-            for(var i=0;i<choosewordlist.length;i++)
-            result.innerHTML +=choosewordlist[i].value + "\t"
+            for(var i=0;i<choosewordlist.length;i++){
+                result.innerHTML +=choosewordlist[i].value + "\t";
+            }
+            result.innerHTML += "<br/>遍历获取到的input标记value值：<br/>"
+            var inputlist = document.getElementsByTagName("input");
+            for(var j=0;j<inputlist.length;j++){
+                result.innerHTML += inputlist[j].value + "\t";
+            }
+            
         }
     </script>
 </body>
